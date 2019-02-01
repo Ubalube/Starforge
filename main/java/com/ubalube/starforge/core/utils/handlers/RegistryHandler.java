@@ -1,5 +1,6 @@
 package com.ubalube.starforge.core.utils.handlers;
 
+import com.ubalube.starforge.common.init.EntityInit;
 import com.ubalube.starforge.common.init.ModBlocks;
 import com.ubalube.starforge.common.init.ModItems;
 import com.ubalube.starforge.core.utils.IHasModel;
@@ -54,11 +55,14 @@ public class RegistryHandler
 	
 	public static void preInitRegistries() 
 	{
+		EntityInit.registerEntities();
+		EntityInit.registerProjectiles();
 	}
 	
 	@SideOnly(Side.CLIENT)
 	public static void preInitRegistriesOne() 
 	{
+		RenderHandler.registerEntityRenders();
 	}
 	
 	public static void initRegistries()

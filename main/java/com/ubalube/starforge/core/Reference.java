@@ -8,4 +8,9 @@ public class Reference
 	public static final String ACCEPTED_VERSIONS = "[1.12.2]";
 	public static final String CLIENT_PROXY_CLASS = "com.ubalube.starforge.core.proxy.ClientProxy";
 	public static final String COMMON_PROXY_CLASS = "com.ubalube.starforge.core.proxy.CommonProxy";
+	
+	/*
+	 * Entities
+	 */
+	public static int SPORED_VILLAGER = 900;
 }

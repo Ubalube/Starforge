@@ -191,7 +191,7 @@
 		{
 			"__comment": "Box17",
 			"from": [ 10, 3.25, 3.25 ],
-			"to": [ 10.5, 4.25, 3.75 ],
+			"to": [ 20.5, 4.25, 3.75 ],
 			"faces": {
 				"down": { "uv": [ 12, 4, 14, 6 ], "texture": "#texture" },
 				"up": { "uv": [ 12, 4, 14, 6 ], "texture": "#texture" },
@@ -378,13 +378,5 @@
 		"fixed": {
 			"translation":  [ 2.0869, 3.4782, 4.8695 ]
 		}
-	},
-	"overrides": [
-        {
-            "predicate": {
-                "using": 1.0
-            },
-            "model": "starforge:item/harvestor_use"
-        }
-    ]
+	}
 }

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.ubalube.starforge.common.items.ItemBase;
+import com.ubalube.starforge.common.items.tools.ItemMatterHarvestor;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -14,6 +15,6 @@ public class ModItems
 {
 	public static final List<Item> ITEMS = new ArrayList<Item>();
 	
-	public static final Item Harvestor = new ItemBase("harvestor", 1, CreativeTabs.COMBAT);
-	
+	public static final Item Harvestor = new ItemMatterHarvestor("harvestor", 1, CreativeTabs.COMBAT);
+	public static final Item Pistol = new ItemMatterHarvestor("pistol", 1, CreativeTabs.COMBAT);
 }

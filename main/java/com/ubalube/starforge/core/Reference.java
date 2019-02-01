@@ -13,4 +13,5 @@ public class Reference
 	 * Entities
 	 */
 	public static int SPORED_VILLAGER = 900;
+	public static int BULLET = 901;
 }

@@ -1,5 +1,8 @@
 package com.ubalube.starforge.core.utils.handlers;
 
+import com.ubalube.starforge.common.commands.CommandTPDim;
+import com.ubalube.starforge.common.init.BiomeInit;
+import com.ubalube.starforge.common.init.DimensionInit;
 import com.ubalube.starforge.common.init.EntityInit;
 import com.ubalube.starforge.common.init.ModBlocks;
 import com.ubalube.starforge.common.init.ModItems;
@@ -57,6 +60,9 @@ public class RegistryHandler
 	{
 		EntityInit.registerEntities();
 		EntityInit.registerProjectiles();
+		
+		DimensionInit.registerDimensions();
+		BiomeInit.registerBiomes();
 	}
 	
 	@SideOnly(Side.CLIENT)
@@ -75,6 +81,7 @@ public class RegistryHandler
 	
 	public static void serverRegistries(FMLServerStartingEvent e)
 	{
+		e.registerServerCommand(new CommandTPDim());
 	}
 
 }

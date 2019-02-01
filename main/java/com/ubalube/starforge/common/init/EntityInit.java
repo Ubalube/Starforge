@@ -1,5 +1,6 @@
 package com.ubalube.starforge.common.init;
 
+import com.ubalube.starforge.common.entity.EntityBullet;
 import com.ubalube.starforge.common.entity.EntitySporedVillager;
 import com.ubalube.starforge.core.Reference;
 import com.ubalube.starforge.core.Starforge;
@@ -18,8 +19,12 @@ public class EntityInit
 	}
 	
 	//Registers stuff that has no egg
+	
+	
 	public static void registerProjectiles() {
+		registerProjectile("bullet", EntityBullet.class , Reference.BULLET, 50);
 	}
+	
 	
 	private static void registerProjectile(String entityName, Class<? extends Entity> entityClass, int id, int range) {
 		

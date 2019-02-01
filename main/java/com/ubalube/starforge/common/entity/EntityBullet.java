@@ -108,6 +108,8 @@ public class EntityBullet extends EntityArrow
         }
         super.onEntityUpdate();
     }
+	
+	
 
 	@Override
 	protected ItemStack getArrowStack() {

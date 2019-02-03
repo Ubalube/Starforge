@@ -14,4 +14,15 @@ public class Reference
 	 */
 	public static int SPORED_VILLAGER = 900;
 	public static int BULLET = 901;
+	
+	/*
+	 * GUIS
+	 */
+	public static int GUI_ASSEMBLY = 0;
+	
+	/*
+	 * Planets
+	 */
+	
+	public static int PLANET = 1;
 }

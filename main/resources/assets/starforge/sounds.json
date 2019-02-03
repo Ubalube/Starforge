@@ -1,0 +1,8 @@
+{
+    "music.space":
+    {
+        "category": "music",
+        "subtitle": "Deep Space Music",
+        "sounds": [{ "name": "starforge:music/space", "stream": true}]
+    }
+}

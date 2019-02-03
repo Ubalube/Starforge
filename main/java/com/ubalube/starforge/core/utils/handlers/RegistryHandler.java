@@ -6,11 +6,16 @@ import com.ubalube.starforge.common.init.DimensionInit;
 import com.ubalube.starforge.common.init.EntityInit;
 import com.ubalube.starforge.common.init.ModBlocks;
 import com.ubalube.starforge.common.init.ModItems;
+import com.ubalube.starforge.core.Reference;
 import com.ubalube.starforge.core.utils.IHasModel;
 
 import net.minecraft.block.Block;
+import net.minecraft.client.audio.MusicTicker;
+import net.minecraft.client.audio.MusicTicker.MusicType;
 import net.minecraft.item.Item;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.event.ModelRegistryEvent;
+import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
@@ -22,6 +27,8 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class RegistryHandler 
 {
 	
+	public static MusicTicker.MusicType MUSIC_TYPE_SPACE;
+	
 	@SubscribeEvent
 	public static void onItemRegister(RegistryEvent.Register<Item> event) {
 		event.getRegistry().registerAll(ModItems.ITEMS.toArray(new Item[0]));
@@ -30,6 +37,7 @@ public class RegistryHandler
 	@SubscribeEvent
 	public static void onBlockRegister(RegistryEvent.Register<Block> event) {
 		event.getRegistry().registerAll(ModBlocks.BLOCKS.toArray(new Block[0]));
+		TileEntityHandler.registerTileEntities();
 	}
 	
 	@SubscribeEvent
@@ -73,6 +81,7 @@ public class RegistryHandler
 	
 	public static void initRegistries()
 	{
+		SoundHandler.registerSounds();
 	}
 	
 	public static  void postInitRegistries()

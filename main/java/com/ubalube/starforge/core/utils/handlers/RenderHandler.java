@@ -1,6 +1,8 @@
 package com.ubalube.starforge.core.utils.handlers;
 
+import com.ubalube.starforge.client.render.RenderPlanet;
 import com.ubalube.starforge.client.render.RenderSporedVillager;
+import com.ubalube.starforge.common.entity.EntityPlanet;
 import com.ubalube.starforge.common.entity.EntitySporedVillager;
 
 import net.minecraft.client.renderer.entity.Render;
@@ -23,6 +25,19 @@ public class RenderHandler {
 			}
 			
 		});
+		
+		RenderingRegistry.registerEntityRenderingHandler(EntityPlanet.class, new IRenderFactory<EntityPlanet>()
+		{
+			
+			@Override
+			public Render<? super EntityPlanet> createRenderFor(RenderManager manager){
+				
+				return new RenderPlanet(manager);
+				
+			}
+			
+		});
+		
 	}
 	
 }

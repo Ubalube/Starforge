@@ -106,6 +106,9 @@ public class EntityBullet extends EntityArrow
         {
             this.setDead();
         }
+        
+        
+        
         super.onEntityUpdate();
     }
 	

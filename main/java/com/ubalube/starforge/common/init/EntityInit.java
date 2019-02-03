@@ -1,6 +1,7 @@
 package com.ubalube.starforge.common.init;
 
 import com.ubalube.starforge.common.entity.EntityBullet;
+import com.ubalube.starforge.common.entity.EntityPlanet;
 import com.ubalube.starforge.common.entity.EntitySporedVillager;
 import com.ubalube.starforge.core.Reference;
 import com.ubalube.starforge.core.Starforge;
@@ -15,7 +16,7 @@ public class EntityInit
 	public static void registerEntities() {
 		
 		//Guardian's
-		registerEntity("Spored Villager", EntitySporedVillager.class, Reference.SPORED_VILLAGER, 50, 5931634, 3095382);
+		registerEntity("sporedvillager", EntitySporedVillager.class, Reference.SPORED_VILLAGER, 50, 5931634, 3095382);
 	}
 	
 	//Registers stuff that has no egg
@@ -23,6 +24,7 @@ public class EntityInit
 	
 	public static void registerProjectiles() {
 		registerProjectile("bullet", EntityBullet.class , Reference.BULLET, 50);
+		registerProjectile("planet", EntityPlanet.class , Reference.PLANET, 50);
 	}
 	
 	

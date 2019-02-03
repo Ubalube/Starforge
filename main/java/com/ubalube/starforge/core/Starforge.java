@@ -1,9 +1,12 @@
 package com.ubalube.starforge.core;
 
+import com.ubalube.starforge.core.events.GoToSpace;
 import com.ubalube.starforge.core.proxy.CommonProxy;
+import com.ubalube.starforge.core.utils.handlers.GuiHandler;
 import com.ubalube.starforge.core.utils.handlers.RegistryHandler;
 
 import net.minecraft.world.World;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -12,6 +15,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -30,6 +34,7 @@ public class Starforge
 	public static void preinit(FMLPreInitializationEvent event)
 	{
 		RegistryHandler.preInitRegistries();
+		NetworkRegistry.INSTANCE.registerGuiHandler(Starforge.instance, new GuiHandler());
 	}
 	
 	@SideOnly(Side.CLIENT)
@@ -52,7 +57,7 @@ public class Starforge
 	public static void init(FMLInitializationEvent e) 
 	{
 		RegistryHandler.initRegistries();
-		
+		MinecraftForge.EVENT_BUS.register(new GoToSpace());
 	}
 	
 	

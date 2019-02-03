@@ -3,6 +3,7 @@ package com.ubalube.starforge.common.init;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.ubalube.starforge.common.blocks.BlockAssembly;
 import com.ubalube.starforge.common.blocks.BlockBase;
 import com.ubalube.starforge.common.blocks.BlockSporePlant;
 
@@ -16,5 +17,5 @@ public class ModBlocks
 	public static final List<Block> BLOCKS = new ArrayList<Block>();
 	
 	public static final Block sporedgrass = new BlockBase("sporedgrass", Material.GROUND, 2.0f);
-	public static final Block sporeplant = new BlockSporePlant("sporeplant", Material.GROUND, 0.5f);
+	public static final Block assemblybench = new BlockAssembly("assemblytable", Material.GROUND, 0.5f);
 }

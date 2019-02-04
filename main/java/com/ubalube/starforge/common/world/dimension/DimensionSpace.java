@@ -61,14 +61,7 @@ public class DimensionSpace extends WorldProviderSurface
 	@Override
 	public float calculateCelestialAngle(long worldTime, float partialTicks)
     {
-        return 0.0F;
-    }
-	
-	@Nullable
-    @SideOnly(Side.CLIENT)
-    public float[] calcSunriseSunsetColors(float celestialAngle, float partialTicks)
-    {
-        return null;
+        return 0.10F;
     }
 	
 	@Override
@@ -84,7 +77,7 @@ public class DimensionSpace extends WorldProviderSurface
 	@SideOnly(Side.CLIENT)
 	@Override
 	public boolean doesXZShowFog(int par1, int par2) {
-		return false;
+		return true;
 	}
 
 	@Override

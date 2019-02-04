@@ -5,6 +5,8 @@ import java.util.List;
 import com.ubalube.starforge.common.init.BiomeInit;
 import com.ubalube.starforge.common.init.DimensionInit;
 
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.multiplayer.WorldClient;
 import net.minecraft.client.renderer.Vector3d;
 import net.minecraft.entity.Entity;
 import net.minecraft.init.Biomes;
@@ -26,15 +28,13 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class DimensionSpore extends WorldProviderSurface
 {
+	
+	private WorldProviderEnd parProvider;
+	
 	public DimensionSpore()
 	{
 		this.biomeProvider = new BiomeProviderSingle(BiomeInit.SPORE);
 	}
-
-    @Override
-    public boolean isDaytime() {
-    	return false;
-    }
     
 	@Override
 	public IChunkGenerator createChunkGenerator() {
@@ -42,8 +42,19 @@ public class DimensionSpore extends WorldProviderSurface
 	}
 	
 	@Override
+	public Vec3d getSkyColor(Entity cameraEntity, float partialTicks) {
+		return new Vec3d(0, 0, 0);
+	}
+	
+	@Override
+	@SideOnly(Side.CLIENT)
+	public Vec3d getFogColor(float par1, float par2) {
+		return new Vec3d(1, 0.2, 0.2);
+	}
+	
+	@Override
 	public boolean isSurfaceWorld() {
-		return false;
+		return true;
 	}
 
 	@Override

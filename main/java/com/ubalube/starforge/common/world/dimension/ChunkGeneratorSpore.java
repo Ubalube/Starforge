@@ -54,7 +54,7 @@ import com.ubalube.starforge.common.init.ModBlocks;
 public class ChunkGeneratorSpore implements IChunkGenerator
 {
 
-		protected static final IBlockState STONE = ModBlocks.sporedgrass.getDefaultState();
+		protected static final IBlockState STONE = Blocks.STONE.getDefaultState();
 		protected static final IBlockState GRAVEL = ModBlocks.sporedgrass.getDefaultState();
 		protected static final IBlockState GRASS = ModBlocks.sporedgrass.getDefaultState();
 		protected static final IBlockState WATER = Blocks.WATER.getDefaultState();
